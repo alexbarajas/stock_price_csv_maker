@@ -35,6 +35,6 @@ for stock in stocks:
     name = f"{stock.lower()}_historical"
     filename = "%s.csv" % name
     with open(f"{filename}", "w") as file:
-        file.write("\"Symbol\",\"Trade DATE\",\"NOCP\"\n")
+        file.write("\"Ticker\",\"Date\",\"Price\"\n")
         for date in dates:
             file.write(f"\"{stock}\",\"{date}\",\"{time_series_daily[date]['4. close']}\"\n")
